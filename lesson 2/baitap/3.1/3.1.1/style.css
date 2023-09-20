@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 180px;
+    height: 200px;
+    border: 2px solid #ccc;
+    text-align: center;
+   
+}
+.box:hover {
+    border: 2px solid orange;
+    cursor: pointer;
+}
+.box img{
+    margin: 10px 0;
+    width: 70px;
+    height: 80px;
+}
+.box a{
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box:hover a{
+    color: orange;
+}
+
+.box:hover p{
+    color: red;
+}
+
+.box p{
+    margin-top: 20px;
+    font-weight: bold;
+}
