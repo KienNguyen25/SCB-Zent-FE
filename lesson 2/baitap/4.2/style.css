@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+background-color: #ccc;
+}
+.header{
+    /* width: 100%; */
+    height: 50px;
+    display: block;
+    background-color: #78b43d;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: #ccc; */
+}
+#main-menu{
+   
+}
+.main-menu-list{
+    display: flex;
+}
+.main-menu-list > li{
+    text-align: center;
+    /* padding:10px ; */
+    padding-top: 8px;
+    margin: 0 5px;
+    list-style: none;
+    height: 50px;
+    /* width: 75px; */
+}
+.main-menu-list > li img{
+    height: 20px;
+}
+.main-menu-list > li i{
+    height: 20px;
+    color: #fff;
+}
+.icon-search i{
+    color: #fff;
+    font-size: 24px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+
+}
+.icon-search:hover{
+    background-color: #598928;
+}
+.main-menu-list > li:nth-child(1){
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+}
+.icon-search{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-left: 20px;
+}
+.main-menu-list > li> a{
+    /* margin-top: 5px; */
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.main-menu-list > li:hover{
+    background-color: #598928;
+    cursor: pointer;
+}
+.sub-menu{
+    /* border: 1px solid #000; */
+    width: 144px;
+    position: absolute;
+    background-color: #fff;
+    top: 50px;
+    display: none;
+}
+.sub-menu > li{
+    width: 200px;
+    list-style: none;
+    background-color: #a8da77;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+.sub-menu > li a{
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    display: flex;
+    text-align: left;
+}
+.sub-menu > li i{
+    line-height: 26px;
+    font-size: 10px;
+    margin-left: 10px;
+}
+.sub-menu > li:hover {
+    background-color: #598928;
+}
+.main-menu-list > li:hover .sub-menu{
+    display: block;
+}
