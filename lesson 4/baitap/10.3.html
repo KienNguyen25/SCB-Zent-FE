@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // Sử dụng hàm prompt để nhập các số M, N và K từ người dùng
+    var userInputM = prompt("Nhập số M:");
+    var userInputN = prompt("Nhập số N:");
+    var userInputK = prompt("Nhập số K:");
+
+    // Chuyển đổi giá trị nhập thành số nguyên
+    var M = parseInt(userInputM);
+    var N = parseInt(userInputN);
+    var K = parseInt(userInputK);
+
+    // Khai báo biến tổng và gán giá trị ban đầu bằng 0
+    var sum = 0;
+
+    // Sử dụng vòng lặp for để duyệt qua các số từ N đến M
+    for (var i = N; i <= M; i++) {
+        // Kiểm tra xem số i có chia hết cho K không
+        if (i % K === 0) {
+            // Nếu có, thì cộng số i vào biến tổng
+            sum += i;
+        }
+    }
+
+    // In kết quả ra màn hình
+    document.write("Tổng các số chia hết cho " + K + " trong khoảng từ " + N + " đến " + M + " là: " + sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

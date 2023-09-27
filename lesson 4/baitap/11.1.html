@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+       li {
+        list-style: none;
+        background-color: #fff;
+        padding: 20px 20px;
+        margin: 5px 10px;
+        display: inline-block;
+        box-shadow: 5px 5px 5px #ccc;
+        cursor: pointer;
+       }
+       li:hover {
+        background-color: rgb(110, 176, 218);
+       }
+       li > label {
+        font-size: 18px;
+        font-weight: 500;
+       }
+       button {
+        padding: 10px 20px;
+        background-color: orange;
+        font-weight: 600;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+       }
+       button:hover {
+        background-color: rgb(245, 189, 84);
+       }
+
+    </style>
+</head>
+<body>
+ <form>
+    <h1>Học lập trình tại Zent Coding School</h1>
+     <ul>
+        <li>
+            <input type="checkbox">
+            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore incidunt maiores dicta adipisci nesciunt voluptates officia ! </label>
+        </li>
+        <li>
+            <input type="checkbox">
+            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore incidunt maiores dicta adipisci nesciunt voluptates officia ! </label>
+        </li>
+        <li>
+            <input type="checkbox">
+            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore incidunt maiores dicta adipisci nesciunt voluptates officia ! </label>
+        </li>
+        <li>
+            <input type="checkbox">
+            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore incidunt maiores dicta adipisci nesciunt voluptates officia ! </label>
+        </li>
+        <li>
+            <input type="checkbox">
+            <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore incidunt maiores dicta adipisci nesciunt voluptates officia ! </label>
+        </li>
+     </ul>
+     <button id="check-all" type="button">Check All</button>
+     <button id="un-check" type="button">UnCheck All</button>
+        
+ </form>
+ 
+    
+<script>
+    //document.getElementById('check-all')
+    //document.getElementsByClassName('check-all')
+    //document.getElementsByTagName('button')
+    var checked = document.getElementById('check-all')
+    checked.addEventListener('click',function(){
+        var inputs = document.getElementsByTagName('input')
+        var n = inputs.length
+        for (var i = 0; i<n; i++){
+           inputs[i].checked = true;
+        }
+        
+    })
+
+    // 
+    var unChecked = document.getElementById('un-check')
+    unChecked.addEventListener('click',function(){
+        var inputs = document.getElementsByTagName('input')
+        var m = inputs.length
+        for (var i = 0; i<m; i++){
+           inputs[i].checked = false;
+        }
+    })
+    </script>
+</body>
+</html>

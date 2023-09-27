@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body {
+        background-color: rgb(79, 55, 55);
+    }
+
+   .group {
+    /* max-width: 1200px; */
+    width: 50%;
+    margin: 50px auto;
+    background-color: #ccc;
+    padding: 50px 0;
+    border-radius: 10px;
+   }
+   .group-heading {
+    text-align: center;
+    margin: 20px 0;
+   }
+    .group-container:nth-child(1) {
+    margin-top: 20px;
+   }
+   .group-container div {
+    display: inline-block;
+    width: 200px;
+    padding: 10px 14px;
+   }
+   .group-container:nth-child(6) {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #999;
+   }
+   input {
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid red;
+   }
+   form {
+   width: 100%;
+   justify-content: center;
+   display: grid;
+   }
+   .btn {
+    width: 100%;
+    margin-top: 45px;
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: 20px;
+   }
+   button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #272443;
+    color: #fff;
+   }
+   button:hover {
+    background-color: #484467;
+   }
+   .error.none {
+    /* display: none; */
+    color: red;
+    font-size: 13px;
+   }
+</style>
+    <body>
+        <div class="group">
+            <div class="group-heading">
+                <h1>Đăng ký</h1>
+            </div>
+            <form>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Họ và tên *</label></div>
+                    <div class="input-check"><input type="text"
+                            placeholder="Nhập họ tên..." id="name"></div>
+                    <div class="error none" id="error-name"></div>
+                </div>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Giới tính *</label></div>
+                    <div class="input-check">
+                        <input style="margin: 0 5px;" type="radio"
+                            name="gender">Nam
+                        <input style="margin: 0 5px;" type="radio"
+                            name="gender">Nữ
+                        <input style="margin: 0 5px;" type="radio"
+                            name="gender">Khác
+                    </div>
+                    <div class="error none" id="error-gender"></div>
+                </div>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Email *</label></div>
+                    <div class="input-check"> <input type="text"
+                            placeholder="Nhập Email..." id="email"></div>
+                    <div class="error none" id="error-email"></div>
+                </div>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Số điện thoại *</label></div>
+                    <div class="input-check"><input type="text"
+                            placeholder="Nhập số điện thoại..." id="sdt"></div>
+                    <div class="error none" id="error-sdt"></div>
+                </div>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Mật khẩu *</label></div>
+                    <div class="input-check"><input type="password"
+                            placeholder="Nhập mật khẩu..." id="pass"></div>
+                    <div class="error none" id="error-pass"></div>
+                </div>
+                <div class="group-container">
+                    <div class="label-check"><label for="">Nhập lại mật khẩu *</label></div>
+                    <div class="input-check"><input type="password"
+                            placeholder="Nhập lại mật khẩu..."
+                            id="confirm-pass"></div>
+                    <div class="error none" id="error-confirm-pass"></div>
+                </div>
+                <div class="btn">
+                    <button type="button" id="btn-register">Đăng ký</button>
+                    <button type="button" id="btn-clear">Xóa trắng</button>
+                </div>
+            </form>
+        </div>
+        <script>
+           var btnRegister = document.getElementById('btn-register');
+           btnRegister.addEventListener('click', function(){
+                //ho ten
+                var name = document.getElementById('name');
+                var errorName = document.getElementById('error-name');
+                errorName.innerText = '';
+                if (name.value.length == 0){
+                    errorName.innerText = 'Họ tên không được để trống!'
+                }
+
+                if (name.value.length < 8){
+                    errorName.innerText = 'Họ tên phải lớn hơn 8 ký tự!'
+                }
+
+                //Email
+                var email = document.getElementById('email');
+                var errorEmail = document.getElementById('error-email');
+                errorEmail.innerText = '';
+                if( validateEmail(email.value) == false){
+                errorEmail.innerText = 'Email không hợp lệ !';
+                }
+
+                //Pass
+                var pass = document.getElementById('pass');
+                var errorPass = document.getElementById('error-pass');
+                errorPass.innerText = '';
+                if (pass.value.length == 0) {
+                    errorPass.innerText = 'Pass không hợp lệ !'
+                }
+                //Consfirm Pass
+                var confirmPass = document.getElementById('confirm-pass');
+                var errorConfirmPass = document.getElementById('error-confirm-pass');
+                errorConfirmPass.innerText = '';
+                if (confirmPass.value !== pass.value){
+                     errorConfirmPass.innerText = 'Nhập sai mật khẩu !';
+
+                }
+
+                
+                //Phone
+                var sdt = document.getElementById('sdt');
+                var errorSdt = document.getElementById('error-sdt');
+                errorSdt.innerText = '';
+                if (isVietnamesePhoneNumber(sdt.value) == false){
+                    errorSdt.innerText = 'Nhập sai sđt !';
+                }
+           });
+            
+           var btnClear = document.getElementById('btn-clear');
+           btnClear.addEventListener('click', function(){
+               var input = document.getElementsByTagName('input');
+               for (var i = 0; i < input.length; i++){
+                input[i].value = '';
+               }
+
+               var error = document.getElementsByClassName('error');
+               for (var i = 0; i < error.length; i++){
+                error[i].innerText = '';
+               }
+           });
+           //validate phone
+           function isVietnamesePhoneNumber(number) {
+             return /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/.test(number);
+             }
+          //validate email
+          function validateEmail(email) {
+          const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(String(email).toLowerCase());
+          }
+        </script>
+    </body>
+</html>
