@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <input type="checkbox">
+
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    
+    <script>
+    //target => Thuộc targettính trả về phần tử nơi sự kiện xảy ra .
+    //onchange => Sự onchangekiện xảy ra khi giá trị của phần tử HTML bị thay đổi .
+    //oninput => Sự oninputkiện xảy ra khi một phần tử được nhập vào .
+                //Sự oninputkiện xảy ra khi giá trị của phần tử <input> hoặc <textarea> bị thay đổi.
+                // Sự oninputkiện KHÔNG xảy ra khi phần tử <select> thay đổi.
+        var inputValue;
+
+       var inputElement = document.querySelector('input[type = "text"]');
+        inputElement.oninput = function(e){
+            inputValue = e.target.value;
+        }
+        // console.log(inputValue);
+</script>
+</body>
+</html>

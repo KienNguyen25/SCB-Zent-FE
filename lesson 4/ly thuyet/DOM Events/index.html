@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <!--
+    Gán hàm buttonClick() để theo dõi sự kiện onclick.
+    Khi người dùng nhấn vào 1 trong 2 nút bên dưới, sự kiện onclick
+    sẽ xảy ra. Hàm buttonClick() được gọi và nhận tham số là 1 đường dẫn.
+   -->
+   <h1 onclick="console.log(this.innerText)">
+        <span>heading text</span>
+    </h1>
+   <h2>
+    <span>DOm event1 </span>
+   </h2>
+   <h2>
+    <span>DOm event2 </span>
+   </h2>
+   <h2>
+    <span>DOm event3 </span>
+   </h2>
+  <button onclick="buttonClick('http://zengroup.net')">Visit Zentgroup.net</button>
+  <button onclick="buttonClick('http://www.fb.com')">Visit Facebook</button>
+</body>
+<script src="script.js"></script>
+</html>

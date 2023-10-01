@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
 <body>
-	<form name="frm" onsubmit="getValue()">
-		<input type="checkbox" name="check" value="Item1">Item1
-		<input type="checkbox" name="check" value="Item2">Item2
-		<input type="checkbox" name="check" value="Item3">Item3
-		<input type="submit" name="submit" value="Submit">
-	</form>
-	<script type="text/javascript">
-		function getValue() {
-			for (var i = 0; i < 3; i++) {
-				if (document.frm.check[i].checked == true) {
-					alert(document.frm.check[i].value);
-				}
-			}
-		}
-	</script>
+	<h1 id="heading">HTML DOM</h1>
+	<h1 id="heading">HTML DOM</h1>
+	<h1 id="heading">HTML DOM</h1>
+	<h2 class="heading-text">HTML DOM 2</h1>
+	<p>Hello guys</p>
+	<div class="box">
+		<div class="heading-2">Heading 2</div>
+		<div class="heading-2">Heading 2</div>
+		<div class="heading-2">Heading 2</div>
+		<div class="heading-2">Heading 2</div>
+	</div>
+	<form action="" id="form-1"></form>
+	<form action="" id="form-2"></form>
 </body>
+<script src="script.js"></script>
 </html>
