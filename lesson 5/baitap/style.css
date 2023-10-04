@@ -210,6 +210,16 @@ section{
     background-color: #F8F9FA;
     padding: 50px 40px;
 }
+
+.container_information-form--controll small,
+form small{
+    color: red;
+    margin-top: 10px;
+    display: block;
+}
+.container_information-form--controll .error{
+    border: 1px solid red;
+}
 .container_information span{
     font-size: 25px;
     display: block;

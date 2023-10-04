@@ -173,28 +173,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="container_information">
-                    <span>Leave a comment</span>
-                    <div class="container_information-form">
-                        <div class="container_information-form--controll">
-                            <p>Name *</p>
-                            <input type="text">
+                <form action="">
+                    <div class="container_information">
+                        <span>Leave a comment</span>
+                        <div class="container_information-form">
+                            <div class="container_information-form--controll">
+                                <p>Name *</p>
+                                <input id="username" type="text">
+                                <small></small>
+                            </div>
+                            <div class="container_information-form--controll">
+                                <p>Email *</p>
+                                <input id="email" type="email">
+                                <small></small>
+                            </div>
+                            <div class="container_information-form--controll">
+                                <p>Website *</p>
+                                <input id="weblink" type="text">
+                                <small></small>
+                            </div>
+                            <div class="container_information-form--controll">
+                                <p>Message *</p>
+                                <textarea id="textms" cols="30" rows="10"></textarea>
+                                <small></small>
+                            </div>
+                            <button type="submit" class="btn-submit">Post Comment</button>
                         </div>
-                        <div class="container_information-form--controll">
-                            <p>Email *</p>
-                            <input type="email">
-                        </div>
-                        <div class="container_information-form--controll">
-                            <p>Website *</p>
-                            <input type="text">
-                        </div>
-                        <div class="container_information-form--controll">
-                            <p>Message *</p>
-                            <textarea cols="30" rows="10"></textarea>
-                        </div>
-                        <button>Post Comment</button>
                     </div>
-                </div>
+                </form>
             </section>
             <aside>
                 <div class="sidebar">
@@ -334,7 +340,8 @@
                                 <div>
                                     <span class="post-item-2-title_tag red">TRAVEL</span>
                                 </div>
-                                <div class="title" style="font-size: 23px;">The 20 Biggest Fintech <br> Companies In America 2019.</div>
+                                <div class="title" style="font-size: 23px;">The 20 Biggest Fintech <br> Companies In
+                                    America 2019.</div>
                                 <div class="time">February 12, 2019</div>
                             </div>
                         </div>
@@ -347,11 +354,14 @@
             <p>Lorem ipsum dolor sit amet i doloremque autem laborum tenetur
                 quibusdam dicta et, quae dignissimos id. Cumque molestias
                 amet deserunt?</p>
-    
+
+          <form action="">
             <div class="btn__search">
-                <input type="text" placeholder="Enter your email address">
+                <input id="email" type="email" placeholder="Enter your email address">
                 <button>Subscribe</button>
             </div>
+            <small style="display: flex;justify-content: flex-start; margin-top: 10px;">loi</small>
+          </form>
         </div>
         <footer>
             <div class="container-footer">
@@ -408,5 +418,4 @@
     </div>
 </body>
 <script src="script.js"></script>
-
 </html>
