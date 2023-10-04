@@ -55,8 +55,7 @@ function checkEmptyError(listInput){
     checkEmailError(email);
  });
  
-
-
+//  /////////////////////////////////////////
 // ---------------------------------
 // // Hàm kiểm tra email hợp lệ
 // function isValidEmail(input) {

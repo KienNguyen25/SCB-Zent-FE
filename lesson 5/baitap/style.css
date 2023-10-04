@@ -217,7 +217,8 @@ form small{
     margin-top: 10px;
     display: block;
 }
-.container_information-form--controll .error{
+.container_information-form--controll .error,
+.btn__search .error{
     border: 1px solid red;
 }
 .container_information span{
