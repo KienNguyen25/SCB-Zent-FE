@@ -640,9 +640,117 @@ footer .title {
         width: 100%;
         display: block;
     }
-    
+    .container_second-post{
+        width: 95%;
+    }
+    .container-footer{
+        width: auto;
+    }
+    .col-1{
+        margin-right: 50px !important;
+    }
+    .footer-sub-link{
+        display: inline-block;
+    }
+    .container-footer{
+        padding: 70px 20px;
+    }
+    .footer-sub-link li{
+        width: 100%;
+    }
   
 }
+/* mobile */
 @media screen and (max-width: 767px){
-
+    .header_list ul{
+        display: none
+    }
+    .header_list .menu-bars{
+        display: block;
+    }
+    .nav_content{
+        width: auto;
+    }
+    .nav_content > span{
+        font-size: 35px;
+    }
+    .container{
+        display: block;
+        width: auto;
+    }
+    section{
+        width: 100%;
+        padding: 0 20px;
+    }
+    aside{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .container_img-group{
+        display: block;
+    }
+    .container_img-group > img{
+        display: block;
+        width: 100%;
+        margin-bottom: 30px
+    }
+    .group-post--left_item2{
+        display: block;
+    }
+    .container_information-form{
+        padding: 50px 20px;
+    }
+    .container_second-post--group{
+        flex-direction: column-reverse  ;
+    }
+    .group-post--left{
+        width: auto;
+    }
+    .group-post--right{
+        width: auto;
+    }
+    .group-post--left_item2-list{
+        margin-bottom: 25px;
+    }
+    .container_second-post{
+        width: auto;
+        padding: 0 20px;
+    }
+    .subcribe{
+        width: auto;
+        padding: 80px 20px;
+    }
+    .container-footer{
+        width: auto;
+        padding: 20px;
+    }
+    .mg-l{
+        display: block !important;
+    }
+    .col-1{
+        width: auto !important;
+        margin: 0 !important;
+    }
+    .col-2{
+        width: auto !important;
+        margin: 20px 0 !important;
+    }
+    .col-3 {
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+    .col-3 .title{
+        padding: 0!important;
+    }
+    .footer-social li > a{
+        padding: 0;
+        margin-right: 30px;
+    }
+    .footer-social{
+        margin-top: 30px;
+    }
+    .footer-sub-link li{
+        width: 50%;
+        padding: 15px 0px;
+    }
 }
