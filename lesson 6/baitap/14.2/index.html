@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
+            maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            padding: 50px 200px;
+
+        }
+
+        h1 {
+            margin: 0;
+            right: 119px;
+            padding: 25px 150px;
+            color: #fff;
+            font-size: 50px;
+
+        }
+
+        .accordion {
+            background-color: rgb(55, 49, 49);
+        }
+
+        .item {
+            padding: 30px 150px;
+        }
+
+        span {
+            color: #8dff76;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+        .header {
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 30px 40px;
+            position: relative;
+            background-color: rgb(64, 61, 61);
+        }
+
+        .open,
+        .close {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -27px;
+            background: #8dff76;
+            border: 1px;
+            padding: 3px 15px;
+            border-radius: 5px;
+        }
+
+        .open {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .close {
+            display: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        /*truong hop mo item do*/
+        .active .close {
+            display: block;
+        }
+
+        .active .open {
+            display: none;
+        }
+
+        .active .content {
+            display: block;
+            border: 1px solid #000;
+            background-color: rgb(64, 61, 61);
+            padding: 25px 40px;
+            color: #fff;
+            font-weight: 1.6px;
+            letter-spacing: 2px;
+        }
+
+        .fa-solid {
+            color: #8dff76;
+            letter-spacing: 2px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion">
+            <h1><i>Akordeon</i> <span><i>VectorPSD</i></span> </h1>
+            <p style="padding: 0 150px;"><i class="fa-solid fa-right-long"></i><i style="color: #fff;">A stylo modern
+                    accordion</i> </p>
+            <div class="item">
+                <div class="header">
+                    <button class="open">+</button>
+                    <button class="close">-</button>
+                    <span> This is an expanded panel</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem, veniam nostrum excepturi saepe
+                    necessitatibus rerum facilis quos quod cupiditate,
+                    molestiae sed hic, accusamus dolor animi fuga fugit
+                    debitis quibusdam esse!
+                    Nulla eos voluptatem exercitationem minima ea, nihil,
+                    adipisci similique alias vitae ratione sed amet illum
+                    quisquam architecto consequuntur accusantium magnam!
+                    Quia ipsum aperiam id nihil maxime asperiores! Fuga, ex
+                    illum.
+                    Vero soluta, magnam libero ullam adipisci perferendis!
+                    Porro repudiandae obcaecati sit ea error minus
+                    perspiciatis, dignissimos, voluptas odit fugit nostrum
+                    saepe eum rerum sequi eius, natus quo ratione ut dolor?
+                    Similique cum molestiae tenetur provident dignissimos ad
+                    neque, possimus excepturi minus, voluptatibus fuga sunt
+                    nesciunt, officiis magnam sint magni id sapiente
+                    corporis. Totam quidem minus enim excepturi magnam
+                    temporibus earum.
+                    Quo nobis culpa, atque, corrupti illo perspiciatis
+                    necessitatibus ut, tempore dicta omnis vitae? Explicabo
+                    voluptates asperiores tempore, dicta beatae dolorum ad,
+                    alias consequuntur maxime eligendi itaque totam quis
+                    quas atque?
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                    <button class="open">+</button>
+                    <button class="close">-</button>
+                    <span>Second Panel</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quasi distinctio veritatis! Ea
+                    dignissimos hic sunt necessitatibus voluptatem dolorum dolorem harum, exercitationem explicabo
+                    fugiat asperiores, itaque incidunt iusto inventore cupiditate.
+                    Distinctio vero repellendus quas consequatur, dignissimos obcaecati placeat tempora architecto
+                    repellat expedita magnam itaque sit minus atque fugiat sequi neque ullam recusandae sunt molestias
+                    odit. Illum voluptates animi consequatur exercitationem!
+                    Ex voluptatibus molestias adipisci. Blanditiis suscipit architecto facilis magni nostrum ipsum
+                    impedit, veritatis sit corporis autem ab inventore, assumenda recusandae consequatur, libero a.
+                    Nesciunt, dolor. Nostrum impedit quis mollitia odio.
+                    Consectetur doloremque, at voluptatibus vitae veritatis fuga quis officia quaerat iste possimus
+                    nulla nisi delectus illo sed quidem non debitis iusto? Asperiores perferendis, earum nulla ipsam
+                    quia ratione illo provident.
+                    Necessitatibus earum eligendi illo in impedit maxime ea tenetur fuga blanditiis deleniti architecto
+                    recusandae ut ullam non accusamus fugiat sint eaque reprehenderit iure, saepe quae rerum excepturi.
+                    Sapiente, doloremque eius.
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                    <button class="open">+</button>
+                    <button class="close">-</button>
+                    <span>Third panel</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quasi distinctio veritatis! Ea
+                    dignissimos hic sunt necessitatibus voluptatem dolorum dolorem harum, exercitationem explicabo
+                    fugiat asperiores, itaque incidunt iusto inventore cupiditate.
+                    Distinctio vero repellendus quas consequatur, dignissimos obcaecati placeat tempora architecto
+                    repellat expedita magnam itaque sit minus atque fugiat sequi neque ullam recusandae sunt molestias
+                    odit. Illum voluptates animi consequatur exercitationem!
+                    Ex voluptatibus molestias adipisci. Blanditiis suscipit architecto facilis magni nostrum ipsum
+                    impedit, veritatis sit corporis autem ab inventore, assumenda recusandae consequatur, libero a.
+                    Nesciunt, dolor. Nostrum impedit quis mollitia odio.
+                    Consectetur doloremque, at voluptatibus vitae veritatis fuga quis officia quaerat iste possimus
+                    nulla nisi delectus illo sed quidem non debitis iusto? Asperiores perferendis, earum nulla ipsam
+                    quia ratione illo provident.
+                    Necessitatibus earum eligendi illo in impedit maxime ea tenetur fuga blanditiis deleniti architecto
+                    recusandae ut ullam non accusamus fugiat sint eaque reprehenderit iure, saepe quae rerum excepturi.
+                    Sapiente, doloremque eius.
+                </div>
+            </div>
+            <div class="item">
+                <div class="header">
+                    <button class="open">+</button>
+                    <button class="close">-</button>
+                    <span>Fourth Panel</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quasi distinctio veritatis! Ea
+                    dignissimos hic sunt necessitatibus voluptatem dolorum dolorem harum, exercitationem explicabo
+                    fugiat asperiores, itaque incidunt iusto inventore cupiditate.
+                    Distinctio vero repellendus quas consequatur, dignissimos obcaecati placeat tempora architecto
+                    repellat expedita magnam itaque sit minus atque fugiat sequi neque ullam recusandae sunt molestias
+                    odit. Illum voluptates animi consequatur exercitationem!
+                    Ex voluptatibus molestias adipisci. Blanditiis suscipit architecto facilis magni nostrum ipsum
+                    impedit, veritatis sit corporis autem ab inventore, assumenda recusandae consequatur, libero a.
+                    Nesciunt, dolor. Nostrum impedit quis mollitia odio.
+                    Consectetur doloremque, at voluptatibus vitae veritatis fuga quis officia quaerat iste possimus
+                    nulla nisi delectus illo sed quidem non debitis iusto? Asperiores perferendis, earum nulla ipsam
+                    quia ratione illo provident.
+                    Necessitatibus earum eligendi illo in impedit maxime ea tenetur fuga blanditiis deleniti architecto
+                    recusandae ut ullam non accusamus fugiat sint eaque reprehenderit iure, saepe quae rerum excepturi.
+                    Sapiente, doloremque eius.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.header').on('click', function () {
+                $('.active').removeClass('active')
+                $(this).parent().toggleClass('active')
+            })
+        });
+    </script>
+</body>
+
+</html>

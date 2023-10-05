@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+/* Màu nền cho trang web */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style cho phần tiêu đề */
+h1 {
+    color: #333;
+}
+
+/* Style cho input và nút Add */
+#taskInput {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addTask {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addTask:hover {
+    background-color: #0056b3;
+}
+
+/* Style cho danh sách công việc */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style cho nút X (Xóa công việc) */
+.delete {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.delete:hover {
+    color: #dd0000;
+}
+
+/* Style cho công việc đã hoàn thành */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Style cho dấu tích */
+.completed::before {
+    content: "\2713"; /* Mã Unicode cho dấu tích (check mark) */
+    margin-right: 5px;
+}
+</style>
+<body>
+     <div id="app">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Nhập công việc...">
+        <button id="addTask">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+    <script>
+        $(document).ready(function () {
+    // Thêm công việc mới vào danh sách
+      $("#addTask").click(function () {
+        var taskText = $("#taskInput").val().trim();
+
+        if (taskText !== "") {
+            var listItem = $("<li>").text(taskText);
+            var deleteButton = $("<span class='delete'>X</span>");
+
+            listItem.append(deleteButton);
+            $("#taskList").append(listItem);
+
+            // Xóa nội dung công việc khi click vào dấu "X"
+            deleteButton.click(function (event) {
+                event.stopPropagation(); // Ngăn chặn sự lan truyền của sự kiện click
+                $(this).parent().remove();
+            });
+
+            // Đánh dấu công việc đã thực hiện khi click vào nó
+            listItem.click(function () {
+                $(this).toggleClass("completed");
+            });
+
+            // Xóa nội dung input sau khi thêm công việc
+            $("#taskInput").val("");
+        } else {
+            alert("Vui lòng nhập nội dung công việc!");
+        }
+    });
+     // Đánh dấu công việc đã thực hiện khi click vào nó
+    listItem.click(function () {
+        $(this).toggleClass("completed");
+    });
+
+     // Xóa nội dung input khi nhấn Enter
+    $("#taskInput").keypress(function (e) {
+        if (e.which === 13) {
+            $("#addTask").click();
+        }
+    });
+});
+
+    </script>
+</html>
