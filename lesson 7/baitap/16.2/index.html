@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    .container {
+      
+    }
+    .header {
+        height: 80px;
+        background-color: #34495e;
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-left {
+        line-height: 80px;
+        font-size: 20px;
+        color: #fff;
+    }
+    .header-right {
+        line-height: 80px;
+        display: flex;
+    }
+    .header-menu_list .subnav {
+        display: none;
+        position: absolute;
+        background-color: #ccc ;
+        color: #fff;
+        list-style: none;
+        padding: 0;
+        left: 0;
+        
+    }
+    .header-menu_list .subnav li {
+       border-bottom: 1px solid #fff;
+    }
+    .header-menu_list li:hover .subnav {
+        display: block;
+    }
+
+    .header-menu_list {
+        display: flex;
+    }
+    .header-menu_list li {
+        padding: 0 20px;
+        list-style: none;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+   
+    .header-menu_list li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .header-menu_list li:hover {
+        background-color: #999;
+    }
+    .introduce {
+        height: 60px;
+        background-color: aliceblue;
+        line-height: 60px;
+    }
+    .introduce p {
+        float: right;
+        color: #7f8c8d;
+        padding-right: 50px;
+        font-size: 17px;
+    }
+    .introduce p > span {
+        color: #2980b9;
+    }
+    .content {
+        height: 660px;
+        background-color: #33719a;
+        text-align: center;
+    }
+    .content h1 {
+        color: #fff;
+        padding-top: 150px;
+        padding-bottom: 20px;
+        font-size: 50px;
+    }
+    .content p {
+        color: #fff;
+        font-size: 30px;
+        padding: 30px 0;
+    }
+    .content button {
+        background-color: #536c85;
+        margin-top: 30px;
+        padding: 10px 50px;
+        font-size: 20px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .content button:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+    .menu-bars {
+        display: none;
+        color: #fff;
+    }
+    .fa-xmark {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 991px) {
+    .menu-bars {
+    display: block;
+     }
+     .header-menu_list {
+        display: none;
+     }
+     .introduce P {
+        font-size: 10px;
+        padding-right: 30px;
+     }
+     .content h1 {
+        font-size: 35px;
+     }
+     .content p {
+        font-size: 15px;
+     }
+     .content button {
+        padding: 10px 40px;
+     }
+     .header-right {
+        position: absolute;
+        left: 0;
+    }
+    .header-menu_list {
+         width: 280px;
+        position: absolute;
+        background-color: #ccc;
+     }
+     
+     .header-menu_list li {
+        border-bottom: 1px solid rgb(114, 110, 110);
+     }
+     .header-left p {
+        margin-right: 80px;
+     }
+     .header-menu_list li:hover .subnav {
+        display: contents;
+        width: 100%;
+    }
+     .menu-bars {
+        top: 4px;
+        right: 36px;
+        position: fixed;
+     }
+     .fa-xmark {
+        position: absolute;
+        display: block;
+        top: 25px;
+        right: -5px;
+     }
+    
+    }
+  
+  
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <p>WordPress Reponsive Menu</p>
+            </div>
+            <div class="header-right">
+                <ul class="header-menu_list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li>
+                        <a href="">Contact <i style="margin-left: 10px" class="fa-solid fa-angle-down"></i></a>
+                        <ul class="subnav">
+                            <li><a href="">Extras</a></li>
+                            <li><a href="">Media</a></li>
+                            <li><a href="">Merchanedise</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Accout</a></li>
+                </ul>
+                <div class="menu-bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <div class="introduce">
+            <p>Rise up, start fresh, see the bright opportunity in each <span>new day</span></p>
+        </div>
+        <div class="content">
+            <h1>WordPress Reponsive Menu And CSS</h1>
+            <p>Taking the strees out of building your website</p>
+            <button>Get It Now</button>
+        </div>
+    </div>
+    
+<script>
+  $(document).on('click','.menu-bars', function(){
+    if($('.menu-bars .fa-solid').hasClass('fa-bars')){
+        $('.header-menu_list').show();
+        $('.menu-bars .fa-solid').removeClass('fa-bars').addClass('fa-xmark');
+    } else {
+        $('.header-menu_list').hide();
+        $('.menu-bars .fa-solid').addClass('fa-bars').removeClass('fa-xmark');
+    }
+  });
+</script>
+</body>
+</html>
