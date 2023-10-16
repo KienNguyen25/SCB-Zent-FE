@@ -1,15 +1,8 @@
 $(document).ready(function(){
-    // // $('.accordion-item.active .accordion-body').slideDown();
-    // $('.accordion-header').click(function(){
-    //     $(this).parent().toggleClass('active');
-    //     $(this).parent().children('.accordion-body').slideToggle();
-    // });
-    $('.accordion-body').hide(); // Hide all answers by default
-
+    // $('.accordion-item.active .accordion-body').slideDown();
     $('.accordion-header').click(function(){
         $(this).parent().toggleClass('active');
-        $(this).parent().children('.accordion-body').slideToggle();
-        $(this).find('.fa-minus, .fa-plus').toggleClass('minus plus');
+        $(this).next('.accordion-body').slideToggle();
     });
     $('button').click(function() {
         checkEmail(); // Gọi hàm kiểm tra email khi nút "Submit" được nhấn
