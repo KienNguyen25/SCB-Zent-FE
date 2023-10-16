@@ -197,7 +197,7 @@
     letter-spacing: 1px;
     line-height: 1.6;
 }
-span {
+.content-service-item > span {
     display: none;
 }
 span > a {
@@ -223,31 +223,33 @@ span > a {
     margin-top: 20px;
     margin-bottom: 50px;
 }
+.accordion-item{
+    margin-bottom: 10px;
+}
 .accordion-header{
+    padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
- .accordion-header .fa-plus{
+.accordion-body{
+    padding: 10px;
     display: none;
 }
-.accordion-header .fa-plus, 
-.accordion-header .fa-minus{
-    color: #50c594;
-}
- .accordion-body{
-    display: none;
-}
-/* .accordion-item.active .accordion-header{
-    background-color: #ccc;
-} */
 
-.active .fa-plus{
+.icon .plus{
+    display: none;
+}
+.accordion-item.active .plus{
     display: block;
 }
-.active .fa-minus{
+.accordion-item.active .minus{
     display: none;
 }
+.plus,.minus{
+    color: #50c594;
+}
+
 /* accordion */
 .content-prices {
     background-color: #f9f9fd;
@@ -396,10 +398,18 @@ span > a {
     margin-top: 20px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    border: none;
 }
 .content-messeger-item > button:hover {
     background-color: #a3d3bf;
 }
+/* .content-messeger-item > span{
+    color: red;
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+} */
 .content-logo-company {
     padding: 100px 0;
 }

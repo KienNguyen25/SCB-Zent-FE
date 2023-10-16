@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="email"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Additional styles for the result message */
+        #resultMessage {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <button id="validateButton">Validate</button>
+    <p id="resultMessage"></p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#validateButton').click(function () {
+                var email = $('#emailInput').val();
+                if (isValidEmail(email)) {
+                    $('#resultMessage').text('Valid email address.');
+                } else {
+                    $('#resultMessage').text('Invalid email address.');
+                }
+            });
+
+            function isValidEmail(email) {
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
