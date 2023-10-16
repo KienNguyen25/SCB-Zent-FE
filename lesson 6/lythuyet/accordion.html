@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     *{
@@ -40,11 +41,17 @@
         background: #367ec5;
         color: #fff;
     }
-    .arrow{
-        transition: all 0.3s;
+
+    .accordion-item.active .plus,
+    .accordion-item.active .minus{
+        position: absolute;
+        float: right;
     }
-    .accordion-item.active .arrow{
-        transform: rotate(180deg);
+    .accordion-item.active .minus{
+        display: block;
+    }
+    .accordion-item.active .plus{
+        display: none;
     }
 </style>
 <body>
@@ -55,7 +62,8 @@
             <div class="accordion-item active">
                 <div class="accordion-header ">
                     <h3>Tieu de 1</h3>
-                    <i class="arrow fa-solid fa-chevron-down"></i>
+                  <i class="minus fa-solid fa-minus"></i>
+                  <i class="plus fa-solid fa-plus"></i>
                 </div>
                 <div class="accordion-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus quas quidem sunt aperiam totam qui rerum facilis voluptates, at doloremque? Perferendis omnis, quod, numquam totam ducimus quis laborum ab maxime quidem dignissimos, nemo reprehenderit quos ut natus dolorum aspernatur.
@@ -64,34 +72,24 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     <h3>Tieu de 2</h3>
-                    <i class="arrow fa-solid fa-chevron-down"></i>
+                  <i class="minus fa-solid fa-minus"></i>
+                  <i class=" plus fa-solid fa-plus"></i>
                 </div>
                 <div class="accordion-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus quas quidem sunt aperiam totam qui rerum facilis voluptates, at doloremque? Perferendis omnis, quod, numquam totam ducimus quis laborum ab maxime quidem dignissimos, nemo reprehenderit quos ut natus dolorum aspernatur.
                 </div>
             </div>
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <h3>Tieu de 3</h3>
-                    <i class="arrow fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="accordion-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus quas quidem sunt aperiam totam qui rerum facilis voluptates, at doloremque? Perferendis omnis, quod, numquam totam ducimus quis laborum ab maxime quidem dignissimos, nemo reprehenderit quos ut natus dolorum aspernatur.
-                </div>
-            </div>
+           
         </div>
     </div>
 </body>
 <script>
-  $(document).ready(function(){
-        // alert('ok');
+     $(document).ready(function(){
         $('.accordion-item.active .accordion-body').slideDown();
         $('.accordion-header').click(function(){
             $(this).parent().toggleClass('active');
             $(this).parent().children('.accordion-body').slideToggle();
         });
-           
-        
-  });
+    });
 </script>
 </html>
