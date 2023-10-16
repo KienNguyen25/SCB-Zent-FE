@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #f2f2f2 ;
+}
+nav{
+    background: url(img/hero-3-bg.png) no-repeat left bottom;
+    background-color: #f2f2f2;
+}
+.banner{
+    background-color: #f9f9fd;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.content-service-item {
+    max-width: 373px;
+    border-radius: 5px;
+    padding: 50px 38px;
+    margin: 15px;
+    cursor: pointer;
+}

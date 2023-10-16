@@ -1,79 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header  class=" navbar navbar-expand-lg navbar-light">
-           <div class="container">
-            <a class="navbar-brand" href="#">STABIG</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Faq</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Client</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Join Us</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
-              </form>
-            </div>
-           </div>
-    </header>
-    <nav>
-        <div class="container nav-banner">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                 <h1>Learing Reponsible & Realistic Welfare.</h1>   
-                 <span>Organize Your Task, Lists and Remember in One App</span>
-                 <ul class="banner-icon d-flex">
-                    <li><a href=""><i style="color: #3c5998;" class="fa-brands
-                                fa-facebook-f"></i></a></li>
-                    <li><a href=""><i style="color: #c13666;" class="fa-brands
-                                fa-instagram"></i></a></li>
-                    <li><a href=""><i style="color: #08acee;" class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href=""><i style="color: #000;" class="fa-brands fa-github"></i></a></li>
-                </ul>
-                <button>Get Started</button>
-                <button>Learn More</button>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img class="img-fluid" src="img/hero-3-img.png" alt="">
-                </div>
-            </div>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <nav style="background-color: #f2f2f2;" class=" navbar
+                navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand" href="#">STABIG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Faq</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Client</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Join Us</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <button type="button" style="background-color:#50c594;border:none ;" class="btn btn-success">Contact
+              Us</button>
+          </form>
         </div>
+      </div>
     </nav>
 
-    
-<script src="script.js"></script>
+  </header>
+  <article>
+    <div class="banner-wrap">
+      <div class="container banner">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12 banner-wrap-lf">
+            <h1>Learing <br>Reponsible & <br>Realistic Welfare.</h1>
+            <p>Organize Your Task, Lists and Remember in One App</p>
+            <ul class="banner-icon">
+              <li><a href=""><i style="color: #3c5998;" class="fa-brands
+                                            fa-facebook-f"></i></a></li>
+              <li><a href=""><i style="color: #c13666;" class="fa-brands
+                                            fa-instagram"></i></a></li>
+              <li><a href=""><i style="color: #08acee;" class="fa-brands fa-twitter"></i></a></li>
+              <li><a href=""><i style="color: #000;" class="fa-brands fa-github"></i></a></li>
+            </ul>
+            <button>Get Started</button>
+            <button>Learn More</button>
+          </div>
+          <div class="col-lg-6 col-md-12 col-12 banner-wrap-rg">
+            <img class="img-fluid" src="img/hero-3-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <div class="container content-item">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content-item-title">
+              <h1>Get Everly Solution.</h1>
+              <p>Don't you get what you want ?</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 30px; margin-bottom: 100px;" class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="card">
+              <i class="fa-brands fa-vuejs"></i>
+              <p>Digital Marketing</p>
+              <p>$1.78 <span>- Month</span></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="card">
+              <i class="fa-solid fa-code"></i>
+              <p>Digital Marketing</p>
+              <p>$1.78 <span>- Month</span></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="card">
+              <i class="fa-brands fa-chromecast"></i>
+              <p>Digital Marketing</p>
+              <p>$1.78 <span>- Month</span></p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="card">
+              <i class="fa-brands fa-stack-overflow"></i>
+              <p>Digital Marketing</p>
+              <p>$1.78 <span>- Month</span></p>
+            </div>
+          </div>
+        </div>
+        <section><i class="fa-solid fa-minus"></i> <i class="fa-solid fa-minus"></i></section>
+
+      </div>
+    </div>
+
+    <div class="banner-2">
+      <div class="container banner-2-content">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12 banner-2-img">
+            <img class="img-fluid" src="img/chat.png" alt="">
+          </div>
+          <div class="col-lg-6 col-md-12 col-12 banner-2-title">
+            <div class="group-title">
+              <h2>Customer support is our main <br>priority
+                fot your growth <br> at every stage</h2>
+              <p>We're alway here to help you</p>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="group-item">
+                    <i class="fa-solid fa-star"></i><b>4.9</b>
+                    <p>Jhon Smith</p>
+                    <p>Quaerat eligedi voluptate
+                      sapiente reiciendis</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="group-item">
+                    <i class="fa-solid fa-medal"></i><b>Awards</b>
+                    <p>2895+</p>
+                    <p>Quaerat eligedi voluptate
+                      sapiente reiciendis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-service">
+      <div class="container">
+        <div class="content-service-title">
+          <h2>Our Services</h2>
+          <p>Don't you get you want ?</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div class="circle"><i class="fa-solid
+                                        fa-user-group"></i></div>
+              <h6 class="mb-0">Community</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div style="background-color:#fbb70d ;" class="circle"><i class="fa-solid fa-wifi"></i></div>
+              <h6 class="mb-0">Preapproval-</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div style="background-color:#db504b ;" class="circle"><i class="fa-solid fa-tv"></i></div>
+              <h6 class="mb-0">Dashboard</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div style="background-color:#1abb9d ;" class="circle"><i class="fa-solid fa-file"></i></div>
+              <h6 class="mb-0">Reports</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div style="background-color:#6c757c ;" class="circle"><i class="fa-solid
+                                        fa-droplet"></i></div>
+              <h6 class="mb-0">Unlimited Color</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="content-service-item">
+              <div style="background-color:#273a5d ;" class="circle"><i class="fa-solid fa-gear"></i></div>
+              <h6 class="mb-0">Efficient</h6 class="mb-0">
+              <p>Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quis nulla dicta numquam
+                illo dolores nobis ipsa? </p>
+              <span><a href="">Read More</a><i class="fa-solid
+                                        fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-question">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12">
+            <div class="ask-question px-5">
+              <p>Ask Us Anithing</p>
+              <h2>Frequently Asked Question</h2>
+              <div class="accordion ">
+                <div class="accordion-item  my-3 border-0 ">
+                  <div class="accordion-header ">
+                    <h6 class="mb-0">Can we put a lot of effort in design?</h6 class="mb-0">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde obcaecati
+                    temporibus pariatur inventore, accusantium recusandae fuga ab voluptates enim sapiente.</div>
+                </div>
+                <div class="accordion-item my-3 border-0">
+                  <div class="accordion-header">
+                    <h6 class="mb-0">Can we put a lot of effort in design?</h6 class="mb-0">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde obcaecati
+                    temporibus pariatur inventore, accusantium recusandae fuga ab voluptates enim sapiente.</div>
+                </div>
+                <div class="accordion-item my-3 border-0">
+                  <div class="accordion-header">
+                    <h6 class="mb-0">Can we put a lot of effort in design?</h6 class="mb-0">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde obcaecati
+                    temporibus pariatur inventore, accusantium recusandae fuga ab voluptates enim sapiente.</div>
+                </div>
+                <div class="accordion-item my-3 border-0">
+                  <div class="accordion-header">
+                    <h6 class="mb-0">Can we put a lot of effort in design?</h6 class="mb-0">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde obcaecati
+                    temporibus pariatur inventore, accusantium recusandae fuga ab voluptates enim sapiente.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 col-md-12 col-12">
+            <div class="img-question">
+              <img style="height: 550px;object-fit: cover;" class="img-fluid" src="img/faq.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-prices">
+      <div class="container">
+        <div class="prices-title">
+          <h2>Our Prices</h2>
+          <p>Get Your Best Package</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="prices-item">
+              <b>BASIC</b>
+              <h3>$0</h3>
+              <b>Per Month</b>
+              <ul class="list">
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10 GB Disk Space</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>1 Year Technical Support</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>SQL Database</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10+ Profitable Keyword</li>
+              </ul>
+              <button class="btn-prices"><a style="text-decoration: none;" href="">Start Trial</a><i
+                  style="color: #fff;" class="fa-solid fa-arrow-right"></i></button>
+
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="prices-item" style="background-color: #273a5d; color:#fff">
+              <b>BUSINESS</b>
+              <h3>$20</h3>
+              <b>Per Month</b>
+              <ul class="list">
+                <li style="color:#a5a5bf"><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10 GB Disk Space</li>
+                <li style="color:#a5a5bf"><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>1 Year Technical Support</li>
+                <li style="color:#a5a5bf"><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>SQL Database</li>
+                <li style="color:#a5a5bf"><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10+ Profitable Keyword</li>
+              </ul>
+              <button class="btn-prices"><a style="text-decoration: none;" href="">Start Trial</a><i
+                  style="color: #fff;" class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="prices-item">
+              <b>PREMIUM</b>
+              <h3>$30</h3>
+              <b>Per Month</b>
+              <ul class="list">
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10 GB Disk Space</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>1 Year Technical Support</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>SQL Database</li>
+                <li><i style="background-color: #50c594; font-size:10px; margin-right: 20px"
+                    class="fa-regular fa-square"></i>10+ Profitable Keyword</li>
+              </ul>
+              <button class="btn-prices"><a style="text-decoration: none;" href="">Start Trial</a><i
+                  style="color: #fff;" class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="content-client">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12 content-client-item">
+            <h2>Our Client Says</h2>
+            <p>Here From Our Members</p>
+            <div class="dot">
+              <img src="img/dot.png" alt="">
+              <h3>Brains R. Evans</h3>
+              <p>Freelance Software Engineer</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Quas qui numquam consequatur cumque laborum
+              dignissimos saepe <br> nulla voluptate quasi nulla autem architecto quae repellat <br> tenetur vero
+              perspiciatis sunt fugit .</p>
+            <i class="fa-solid fa-minus"></i><i style="color: #b5e0ce ;" class="fa-solid fa-minus"></i><i
+              style="color: #b5e0ce ;" class="fa-solid fa-minus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content-messeger">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12 content-messeger-item">
+            <p>Recent</p>
+            <h1>5000+ Project <br> all over the world</h1>
+            <p>Join the community now !</p>
+            <input type="text" placeholder="Enter Email">
+            <button>Submit<i style="margin-left: 10px ;" class="fa-solid fa-paper-plane"></i></button>
+          </div>
+          <div class="col-lg-6 col-md-12 col-12">
+            <img class="img-fluid" src="img/subscribe-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-logo-company">
+      <div class="container">
+        <div class="row logo-company">
+          <div class="col-lg-3 col-md-3 col-6 img-logo-company">
+            <img src="img/brand-logo-1.png" alt="">
+          </div>
+          <div class="col-lg-3 col-md-3 col-6 img-logo-company">
+            <img src="img/brand-logo-2.png" alt="">
+          </div>
+          <div class="col-lg-3 col-md-3 col-6 img-logo-company">
+            <img src="img/brand-logo-3.png" alt="">
+          </div>
+          <div class="col-lg-3 col-md-3 col-6 img-logo-company">
+            <img src="img/brand-logo-4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 footer-item">
+          <h2>STABIG</h2>
+          <p>Locate Us</p>
+          <p>3964 White River Way behind <br> Salt Lake City,UT <br>84106</p>
+          <a href="">801-468-2313</a> <br>
+          <a href="">591-578-1234</a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <h2>Other links</h2>
+          <ul class="footer-list">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Pricing</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Condition</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29786.167963472322!2d105.8800385!3d21.061836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a98c5b96bb27%3A0xf9a54720eb75bf70!2zxJDhu6ljIEdpYW5nLCBMb25nIEJpw6puLCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1661683238018!5m2!1svi!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="container-fluid">
+    <div class=" row">
+      <div class="col-lg-12 col-md-12 col-12">
+        <p style="margin: 0;">2020 © Zorial. Design by Themesdesign</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+
 </html>
