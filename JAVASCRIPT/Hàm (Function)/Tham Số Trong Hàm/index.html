@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    1. Tham số ?
+    - Định Nghĩa ?
+    - Kiểu dữ liệu?
+    - Tính Private?
+    - 1 tham số
+
+    2. Truyển Tham Số
+    - 1 tham số
+    - Nhiều tham số
+
+    3. Arguments ?
+    - Đối tượng Arguments 
+    -Giới Thiệu Vòng lặp For of
+ -->
+    <script>
+        // function writeLog(){
+        //      console.log('day la 1 dong log');
+        // }
+        // writeLog();
+
+        //Hàm 1 tham số
+        function writeLog(message){
+             console.log(message);
+        }
+        writeLog('test message');
+
+        //Hàm Nhiều Tham số
+        function documentLog(mess, mess2){
+             console.log(mess);
+             console.log(mess2);
+        }
+        documentLog('test 1', 'test 2');
+
+        //Arguments
+        function writeLogs(){
+            var myString = '';
+            for( var param of arguments){
+                myString += `${param} - `    //${param} template string 
+            };
+            console.log(myString);
+        }
+        writeLogs('param 1', 'param 2', 'param 3' ,4 ,6);
+    </script>
+</body>
+</html>

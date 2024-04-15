@@ -122,7 +122,7 @@
 
     @media screen and (max-width: 991px) {
     .menu-bars {
-    display: block;
+        display: block;
      }
      .header-menu_list {
         display: none;
@@ -147,7 +147,11 @@
     .header-menu_list {
          width: 280px;
         position: absolute;
+        top: 0;
+        left: -100%;
         background-color: #ccc;
+        transition: 0.6s ease;
+        transition-property: left;
      }
      
      .header-menu_list li {
@@ -216,7 +220,7 @@
 <script>
   $(document).on('click','.menu-bars', function(){
     if($('.menu-bars .fa-solid').hasClass('fa-bars')){
-        $('.header-menu_list').show();
+        $('.header-menu_list').toggle();
         $('.menu-bars .fa-solid').removeClass('fa-bars').addClass('fa-xmark');
     } else {
         $('.header-menu_list').hide();

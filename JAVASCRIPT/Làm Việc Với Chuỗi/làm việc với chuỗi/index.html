@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Làm việc với chuỗi -->
+</body>
+<script>
+    var myString = '  Học js với f8 js js  ';
+    //1. length
+    console.log(myString.length);
+    //2. tìm vị trí của ký tự trong 1 chuỗi indexOf
+    console.log(`vị trí của ký tự js thứ 2 là : `+ myString.indexOf('js', 7));
+    //2.1 tìm vị trí cuối cùng của ký tự
+    console.log(`vị trí cuối cùng của js là :` + myString.lastIndexOf('js'));
+    //2.2 tìm kiếm Search
+    console.log(`tìm kiếm với js với search :`+myString.search('js'));
+    //3 cắt chuỗi slice
+    console.log(`Cắt chuỗi "${myString}"  với slice tại vị trí bắt đầu là 11 và vị trí kết thúc là 13: `+myString.slice(11,13));
+    //3.1 cắt chuỗi slice #1
+    console.log(myString.slice(6));
+    //3.2 cắt chuỗi slice #2
+    console.log(`Cắt chuỗi ${myString} tại vị trí -8,-5 :`+myString.slice(-8,-5));
+    //4 Replace => ghi đè
+    console.log(myString.replace('js','Javascript'));
+    //4.1 Biểu thức chính quy /'js'/g => tìm tất cả ký tự 'js'
+    console.log(myString.replace(/js/g,'Javascript'));
+    //5 Convert to Upper Case chuyển đổi chuỗi thành chữ hoa
+    console.log(myString.toUpperCase());
+    //5 Convert to Lower Case chuyển đổi chuỗi thành chữ thường
+    console.log(myString.toLocaleLowerCase());
+    //6 Trim => Xóa khoảng cách của đầu và cuối
+    console.log(myString.trim());
+    //7 Split => Cắt chuỗi thành một mảng ta phải chuyền vào 1 điểm chung ví dụ: ', '
+    var languages = "javascript, php , ruby, python";
+    console.log(languages.split(', '));
+    //7 Split #1
+    console.log( languages.split(""));
+    //8 Get a character by index => lấy 1 ký tự bới index cho trước
+    const myString2 = 'Kien Nguyen';
+    console.log(myString2.charAt(0));
+
+</script>
+</html>

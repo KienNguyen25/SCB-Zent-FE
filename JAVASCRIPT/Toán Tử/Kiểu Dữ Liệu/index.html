@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Kiểu Dữ Liệu Trong JAVASCRIPT
+    *Kiểu Dữ Liệu Nguyên Thủy
+    1. Number
+    2. String
+    3. Boolean
+    4. Undefined
+    5. NUll
+    6. Symbol
+
+    **Kiểu Dữ Liệu Phức Tạp
+    1. Function
+    2.Object
+    -2.1 Array
+    -2.2 Object
+    -->
+<script>
+    //Kiểu Dữ Liệu Nguyên Thủy
+    //Number type
+    var a = 1;
+    var b = 2.6;
+    //String type
+    var fullname =  'Nguyễn Hữu Kiên ';
+    // console.log(fullname);
+    document.write(fullname)
+    //Boolean type
+    var isSuccess = true;
+    //Undefined 
+    var age;
+    //Null
+    var isNUll = null;
+    //Symbol
+    var id = Symbol('id'); //unique => Duy nhất
+    console.log(id);
+
+    //Kiểu Dữ Liệu phức Tạp
+    //Function
+    // var myFunction = function(){
+    //     alert('Xin Chào');
+    // }
+    myFunction();
+    //Object
+    var myObject = {
+        name: 'Nguyen HUu Kien',
+        age: 18,
+        address: 'HÀ Nội',
+        myFunction: function(){
+
+        }
+    };
+    // console.log('myObject', myObject);
+
+    //Array
+    var myArray = [
+        'Javascript',
+        'PHP',
+        'Ruby'
+    ];
+    console.log(myArray);
+
+    //Kiểm Tra Kiểu Dữ Liệu Typeof
+    //VD:
+    var number = 2002;
+    console.log(typeof number);
+
+
+
+</script>    
+</body>
+</html>

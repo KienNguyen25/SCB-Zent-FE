@@ -2,7 +2,7 @@ $(document).ready(function(){
     // $('.accordion-item.active .accordion-body').slideDown();
     $('.accordion-header').click(function(){
         $(this).parent().toggleClass('active');
-        $(this).next('.accordion-body').slideToggle();
+        $(this).parent().children('.accordion-body').slideToggle();
     });
     $('button').click(function() {
         checkEmail(); // Gọi hàm kiểm tra email khi nút "Submit" được nhấn
